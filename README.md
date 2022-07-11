@@ -1,7 +1,7 @@
 # SideProject
 
 ## EditDB
-
+https://semihumanbeing.oopy.io/660d3cc4-5810-4e0e-bf52-e5141ae32339 <br>
 프로젝트를 만드는 중에 데이터베이스의 컬럼을 추가해야할 때 사용할 수 있는 체크리스트 <br>
 - 테이블명, 컬럼명, 데이터타입을 선택하면 ajax로 값을 불러온다.
 
