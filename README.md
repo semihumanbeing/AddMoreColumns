@@ -7,4 +7,4 @@
 ![image](https://user-images.githubusercontent.com/99929191/178167907-692a5ed0-1a74-4603-a63e-cc6890901606.png)<br>
 - 테이블명, 컬럼명, 데이터타입을 선택하면 ajax로 값을 불러온다.<br>
 ![image](https://user-images.githubusercontent.com/99929191/178167942-0616b257-8927-42d1-a460-4dc05ed0270a.png)<br>
-- 사용자는 내가 필요한 값을 체크하고 생성된 쿼리를 수정하여 컬럼을 추가할 때 도움을 받을 수 있다.
+- 사용자는 내게 필요한 쿼리를 부여받고 원하는대로 수정하여 컬럼을 추가할 때 도움을 받을 수 있다.
