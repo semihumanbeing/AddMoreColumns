@@ -7,4 +7,3 @@
 - 사용자는 필요한 쿼리를 부여받고 원하는대로 수정하여 컬럼을 추가할 때 도움을 받을 수 있다.
 ![image](https://user-images.githubusercontent.com/99929191/178178054-6c8a18f0-6cde-4c1a-b220-e695c800e80a.png)
 <br>
-![image](https://user-images.githubusercontent.com/99929191/178178708-33c4d4ca-0cbb-4d46-a446-764ce95be2a9.png)
