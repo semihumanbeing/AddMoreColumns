@@ -17,6 +17,7 @@
 #disp{
 	margin-left: 10px;
 	margin-top: 20px;
+	width: 800px;
 }
 </style>
 
@@ -26,6 +27,8 @@ function send(f){
 	var tablename = f.tablename.value.trim();
 	var columnname = f.columnname.value.trim();
 	var datatype = f.datatype.value;
+	var database = f.database.value;
+	var constraint = f.constraint.value;
 	
 	if(tablename == ''){
 		alert("테이블명을 입력하세요");
@@ -47,7 +50,9 @@ function send(f){
 		data : {
 			'tablename' : tablename,
 			'columnname' : columnname,
-			'datatype' : datatype
+			'datatype' : datatype,
+			'database' : database,
+			'constraint' : constraint
 		},
 		success : function(resData){
 			$("#disp").html(resData);
@@ -65,8 +70,9 @@ function send(f){
 <div id="inputs">
 <h1>
 	프로젝트를 만드는 중인데<br>
-	데이터베이스 컬럼을 추가해야해!!!
+	데이터베이스에 컬럼을 추가해야해!!!
 </h1>
+<h4>이 웹사이트는 Java, MyBatis에 최적화 되어있습니다.</h4>
 <form>
 추가할 테이블과 컬럼명<br>
 <input type="text" name="tablename" placeholder="테이블명"><br>
@@ -78,6 +84,17 @@ function send(f){
     <option value="VARCHAR">VARCHAR</option>
     <option value="CLOB">CLOB</option>
     <option value="DATE">DATE</option>
+  </select><br>
+<label for="database">내가 사용하는 데이터베이스는?</label>
+  <select name="database" id="database">
+    <option value="Oracle">Oracle</option>
+    <option value="MySQL">MySQL</option>
+  </select>
+<label for="constraint">제약조건</label>
+  <select name="constraint" id="constraint">
+    <option value="">없음</option>
+    <option value="PRIMARY KEY">PRIMARY KEY</option>
+    <option value="FOREIGN KEY">FOREIGN KEY</option>
   </select>
 <br><br>
 <input class="btn" type="button" value="추가하기" onclick="send(this.form)">
