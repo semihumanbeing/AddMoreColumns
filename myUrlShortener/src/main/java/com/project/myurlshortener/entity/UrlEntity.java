@@ -10,7 +10,6 @@ import org.hibernate.annotations.NaturalId;
 @Entity
 public class UrlEntity {
 
-	
 	@Id
 	@GeneratedValue
 	private long id;
@@ -22,13 +21,13 @@ public class UrlEntity {
 	@Column(nullable = false)
 	private String url;
 
-	public UrlEntity() {
-		super();
-	}
-
 	public UrlEntity(final String alias, final String url) {
 		this.alias = alias;
 		this.url = url;
+	}
+
+	public UrlEntity() {
+		super();
 	}
 
 	public long getId() {
