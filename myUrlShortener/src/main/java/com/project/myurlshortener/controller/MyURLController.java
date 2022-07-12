@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +16,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.myurlshortener.request.UrlCreateRequest;
+import com.project.myurlshortener.service.UrlService;
 
 @RestController
 public class MyURLController {
+	
+	private UrlService urlService;
+	
+	// Url service 생성자주입
+	@Autowired
+	public MyURLController(UrlService urlService) {
+		super();
+		this.urlService = urlService;
+	}
 
 	@GetMapping("/{alias}")
 	public ResponseEntity<?> redirectHandler(@PathVariable String alias) throws URISyntaxException{
@@ -32,7 +43,7 @@ public class MyURLController {
 	
 	@PostMapping("/")
 	public ResponseEntity<?> redirectCreator(@Valid @RequestBody UrlCreateRequest urlCreateRequest){
+		return ResponseEntity.ok(urlService.createUrl(urlCreateRequest));
 		
-		return null;
 	}
 }
