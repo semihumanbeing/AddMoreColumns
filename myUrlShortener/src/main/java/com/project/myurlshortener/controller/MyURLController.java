@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyURLController {
 
-	@GetMapping("/{id}")
-	public ResponseEntity<?> redirectHandler(@PathVariable String id) throws URISyntaxException{
+	@GetMapping("/{alias}")
+	public ResponseEntity<?> redirectHandler(@PathVariable String alias) throws URISyntaxException{
 		// URI를 구해서 http header 에 전달해준다.
 		URI uri = new URI("https://www.google.com");
 		HttpHeaders httpHeaders = new HttpHeaders();
@@ -25,7 +25,7 @@ public class MyURLController {
 		return new ResponseEntity<>(httpHeaders, HttpStatus.MOVED_PERMANENTLY);
 	}
 	
-	@PostMapping("/{id}")
+	@PostMapping("/{alias}")
 	public ResponseEntity<?> redirectCreator(@PathVariable String id){
 		
 		return null;
